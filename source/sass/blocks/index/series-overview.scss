@@ -1,0 +1,50 @@
+$main-color-3: #f2f2f2;
+$text-color-1: #444444;
+$text-color-2: #000000;
+
+.series-overview {
+  padding: 0;
+  padding-top: 30px;
+  padding-bottom: 18px;
+  background-color: $main-color-3;
+}
+
+.series-overview__title {
+  max-width: fit-content;
+  margin: 0;
+  margin-left: 91px;
+  margin-right: auto;
+  margin-bottom: 29px;
+  padding: 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  color: $text-color-2;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.series-overview__text {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0 33px 0 20px;
+  font-family: "Lato", "Aerial", sans-serif;
+
+  &:last-of-type {
+    margin-bottom: 38px;
+  }
+}
+
+.series-overview__link {
+  margin: 0;
+  margin-left: 19px;
+  text-decoration: none;
+}
+
+.series-overview__link-text {
+  font-size: 16px;
+  line-height: 16px;
+  color: $text-color-2;
+  text-align: center;
+  text-transform: uppercase;
+}

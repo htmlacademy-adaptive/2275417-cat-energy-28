@@ -1,0 +1,20 @@
+$main-color-1: #ffffff;
+$text-color-1: #444444;
+
+.page {
+  height: 100%;
+}
+
+.page__body {
+  width: 320px;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: $main-color-1;
+  color: $text-color-1;
+}

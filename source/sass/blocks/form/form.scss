@@ -1,0 +1,107 @@
+$main-color-2: #68b738;
+$text-color-1: #444444;
+$text-color-2: #000000;
+$text-color-4: #222222;
+
+.form {
+  margin: 0;
+}
+
+.form__group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.form__group--cat-data {
+  padding-bottom: 24px;
+}
+
+.form__group--course-type {
+  padding-top: 22px;
+  padding-bottom: 19px;
+}
+
+.form__group--contacts {
+  padding-top: 26px;
+  padding-bottom: 24px;
+}
+
+.form__group--comment {
+  padding-bottom: 23px;
+}
+
+.form__group--extra {
+  padding-bottom: 34px;
+}
+
+.form__title {
+  margin: 0;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 26px;
+  color: $text-color-2;
+
+  &--contacts {
+    margin-bottom: 35px;
+  }
+
+  &--comment {
+    margin-bottom: 38px;
+  }
+
+  &--extra {
+    margin-bottom: 34px;
+  }
+}
+
+.form__text {
+  font-size: 16px;
+  text-transform: uppercase;
+
+  &--alter-color {
+    color: $text-color-4;
+  }
+
+  &--alter-color-2 {
+    color: $text-color-2;
+  }
+}
+
+.form__input {
+  margin: 0;
+  font-family: "Oswald", "Aerial", sans-serif;
+  font-size: 16px;
+  color: $text-color-1;
+  text-transform: uppercase;
+
+  &::placeholder {
+    color: $text-color-1;
+  }
+}
+
+.form__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.form__item {
+  margin-bottom: 13px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.form__button {
+  margin-bottom: 21px;
+}
+
+.form__legend {
+  margin: 0;
+  font-family: "Lato", "Aerial", sans-serif;
+  line-height: 16px;
+  color: $text-color-2;
+  text-align: center;
+}

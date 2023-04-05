@@ -1,0 +1,26 @@
+$text-color-2: #000000;
+
+.main-nav__list {
+  list-style-type: none;
+}
+
+.main-nav__item {
+  padding: 22px 0 24px;
+}
+
+.main-nav__link {
+  text-decoration: none;
+}
+
+.main-nav__text {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: $text-color-2;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.main-nav__toggle {
+  display: inline-block;
+}

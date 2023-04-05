@@ -4,6 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
@@ -18,19 +19,23 @@
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--current" href="index.html">главная</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">каталог продукции</a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="form.html">подбор программы</a>
-          </li>
-        </ul>
-      </div>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--current" href="index.html">
+            <span class="main-nav__text">главная</span>
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="catalog.html">
+            <span class="main-nav__text">каталог продукции</span>
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="form.html">
+            <span class="main-nav__text">подбор программы</span>
+          </a>
+        </li>
+      </ul>
     </nav>
   </header>
   <main class="main-index">
@@ -39,7 +44,7 @@
         питание для котов
       </h1>
       <p class="main-promo__text">Занялся собой? Займись котом!</p>
-      <img class="main-promo__image" src="img/main/index-can-mobile-1.jpg" width="280" height="270"
+      <img class="main-promo__image" src="img/main/index-can-mobile-1.png" width="280" height="270"
         alt="Продукция Cat Energy">
       <a class="main-promo__link button" href="form.html">подобрать программу</a>
     </section>
@@ -51,14 +56,18 @@
           <p class="series-overview__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
             Пора на диету! Cat Energy Slim поможет
             вашему питомцу сбросить лишний вес.</p>
-          <a class="series-overview__link" href="catalog.html">каталог slim</a>
+          <a class="series-overview__link" href="catalog.html">
+            <span class="series-overview__link-text">каталог slim</span>
+          </a>
         </li>
         <li class="main-guide__item series-overview">
           <h2 class="series-overview__title">Набор массы</h2>
           <p class="series-overview__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
             поможет вашему коту нарастить необходимые
             мышцы!</p>
-          <a class="series-overview__link" href="catalog.html">каталог pro</a>
+          <a class="series-overview__link" href="catalog.html">
+            <span class="series-overview__link-text">каталог pro</span>
+          </a>
         </li>
       </ul>
     </section>
@@ -114,11 +123,13 @@
       </div>
     </section>
     <section class="contacts">
-      <h2 class="contacts__title">приглашаем к сотрудничеству дилеров!</h2>
-      <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="contacts__wrapper">
+        <h2 class="contacts__title">приглашаем к сотрудничеству дилеров!</h2>
+        <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      </div>
       <iframe class="contacts__map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.32085871595826!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1680280165520!5m2!1sen!2sru"
-        width="320" height="362" style="border:0;" allowfullscreen="" loading="lazy"
+        width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </section>

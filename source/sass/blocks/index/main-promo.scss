@@ -1,0 +1,59 @@
+@mixin page-heading-style {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+$main-color-1: #ffffff;
+$main-color-2: #68b738;
+
+.main-promo {
+  position: relative;
+  margin: 0 auto;
+  padding: 27px 20px 20px;
+
+  &::before {
+    content: ("");
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 320px;
+    height: 302px;
+    background-color: $main-color-2;
+    background-image: url("../img/main/index-background-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+}
+
+.main-promo__title {
+  @include page-heading-style;
+  margin: 0 auto;
+  margin-bottom: 25px;
+  color: $main-color-1;
+  text-align: center;
+}
+
+.main-promo__text {
+  margin: 0;
+  margin-bottom: 10px;
+  line-height: 14px;
+  color: $main-color-1;
+  text-align: center;
+  text-transform: uppercase;
+
+  &:last-of-type {
+    margin-bottom: 29px;
+  }
+}
+
+.main-promo__image {
+  background: transparent;
+  margin-bottom: 3px;
+}
+
+.main-promo__link {
+  font-size: 14px;
+  line-height: 18px;
+}

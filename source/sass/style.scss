@@ -1,1 +1,69 @@
-// Начните писать стили здесь
+@use "./blocks/page.scss";
+@use "./blocks/page-header";
+@use "./blocks/company-logo.scss";
+@use "./blocks/main-nav.scss";
+@use "./blocks/button.scss";
+@use "./blocks/index/main-index";
+@use "./blocks/index/main-promo.scss";
+@use "./blocks/index/series-overview.scss";
+@use "./blocks/index/main-guide.scss";
+@use "./blocks/index/product-overview.scss";
+@use "./blocks/index/living-example.scss";
+@use "./blocks/index/slider-container.scss";
+@use "./blocks/contacts.scss";
+@use "./blocks/form/main-form.scss";
+@use "./blocks/form/course-selection.scss";
+@use "./blocks/form/form.scss";
+@use "./blocks/catalog/main-catalog.scss";
+@use "./blocks/catalog/products-catalog.scss";
+@use "./blocks/catalog/product-card.scss";
+@use "./blocks/catalog/additional-products.scss";
+@use "./blocks/catalog/additional-product.scss";
+@use "./blocks/catalog/gift.scss";
+@use "./blocks/page-footer.scss";
+@use "./blocks/social.scss";
+@use "./blocks/developer.scss";
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/oswald/oswaldmedium.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lato/Lato-Regular.woff2") format("woff2");
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+$main-color-1: #ffffff;
+$main-color-2: #68b738;
+$main-color-3: #f2f2f2;
+$text-color-1: #444444;
+$text-color-2: #000000;
+$text-color-3: #111111;
+$text-color-4: #222222;
+$living-example-background-color: #eaeaea;
+
+@mixin page-heading-style {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}

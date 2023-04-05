@@ -1,0 +1,25 @@
+@mixin page-heading-style {
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+$text-color-2: #000000;
+
+.products-catalog {
+  margin: 0;
+  padding: 27px 20px 0;
+}
+
+.products-catalog__title {
+  @include page-heading-style;
+  margin: 0;
+  margin-bottom: 41px;
+  color: $text-color-2;
+}
+
+.products-catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
