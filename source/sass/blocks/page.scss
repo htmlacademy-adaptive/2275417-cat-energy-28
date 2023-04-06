@@ -1,20 +1,19 @@
-$main-color-1: #ffffff;
-$text-color-1: #444444;
+@use "../variables.scss";
 
 .page {
   height: 100%;
 }
 
 .page__body {
-  width: 320px;
-  min-height: 100%;
+  width: 100%;
+  max-width: 1440px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  font-family: "Oswald", "Arial", sans-serif;
+  font-family: variables.$main-font-1;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
-  background-color: $main-color-1;
-  color: $text-color-1;
+  background-color: variables.$main-color-1;
+  color: variables.$text-color-1;
 }

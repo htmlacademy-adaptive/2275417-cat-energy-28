@@ -1,12 +1,11 @@
-$text-color-3: #111111;
-$main-color-3: #f2f2f2;
+@use "../variables.scss";
 
 .contacts {
   margin: 0 auto;
   padding: 26px 0 0;
 
   &--alter-background {
-    background-color: $main-color-3;
+    background-color: variables.$main-color-3;
   }
 }
 
@@ -19,13 +18,13 @@ $main-color-3: #f2f2f2;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  color: $text-color-3;
+  color: variables.$text-color-3;
   text-transform: uppercase;
 }
 
 .contacts__text {
   margin: 0;
-  font-family: "Lato", "Aerial", sans-serif;
+  font-family: variables.$main-font-2;
   font-size: 14px;
   line-height: 20px;
 }

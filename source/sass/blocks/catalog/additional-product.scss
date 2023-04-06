@@ -1,4 +1,4 @@
-$text-color-4: #222222;
+@use "../../variables.scss";
 
 .additional-product {
   margin: 0;
@@ -6,18 +6,17 @@ $text-color-4: #222222;
 }
 
 .additional-product__title {
-  margin: 0;
-  margin-bottom: 13px;
+  margin: 0 0 13px;
   font-weight: 400;
   font-size: 16px;
   line-height: 16px;
-  color: $text-color-4;
+  color: variables.$text-color-4;
   text-transform: uppercase;
 }
 
 .additional-product__text {
   margin: 0;
-  font-family: "Lato", "Aerial", sans-serif;
+  font-family: variables.$main-font-2;
   line-height: 14px;
 }
 

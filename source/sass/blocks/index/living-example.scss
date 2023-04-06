@@ -1,43 +1,39 @@
-$text-color-2: #000000;
-$living-example-background-color: #eaeaea;
+@use "../../variables.scss";
 
 .living-example {
   margin: 0 auto;
   padding: 25px 20px 40px;
-  background-color: $living-example-background-color;
+  background-color: variables.$living-example-background-color;
 }
 
 .living-example__title {
-  margin: 0;
-  margin-bottom: 40px;
+  margin: 0 0 40px;
   padding: 0;
   font-weight: 400;
   font-size: 36px;
   line-height: 40px;
-  color: $text-color-2;
+  color: variables.$text-color-2;
 }
 
 .living-example__text {
-  margin: 0;
-  margin-bottom: 20px;
-  font-family: "Lato", "Aerial", sans-serif;
+  margin: 0 0 20px;
+  font-family: variables.$main-font-2;
 }
 
 .living-example__stats-list {
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
 }
 
 .living-example__stats-number {
   font-size: 24px;
   line-height: 24px;
   text-align: center;
-  color: $text-color-2;
+  color: variables.$text-color-2;
 }
 
 .living-example__stats-description {
   margin: 0;
-  font-family: "Lato", "Aerial", sans-serif;
+  font-family: variables.$main-font-2;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
@@ -48,7 +44,7 @@ $living-example-background-color: #eaeaea;
   max-width: fit-content;
   font-size: 14px;
   line-height: 20px;
-  color: $text-color-2;
+  color: variables.$text-color-2;
   text-align: center;
   text-transform: uppercase;
 }

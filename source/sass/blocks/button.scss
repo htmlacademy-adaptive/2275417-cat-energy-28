@@ -1,14 +1,13 @@
-$main-color-1: #ffffff;
-$main-color-2: #68b738;
+@use "../variables.scss";
 
 .button {
   margin: 0;
-  font-family: "Oswald", "Aerial", sans-serif;
+  font-family: variables.$main-font-1;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
-  background-color: $main-color-2;
-  color: $main-color-1;
+  background-color: variables.$main-color-2;
+  color: variables.$main-color-1;
   text-decoration: none;
   text-transform: uppercase;
 }

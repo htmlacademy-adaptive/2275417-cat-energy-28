@@ -1,10 +1,5 @@
-@mixin page-heading-style {
-  font-weight: 400;
-  font-size: 36px;
-  line-height: 36px;
-}
-
-$text-color-2: #000000;
+@use "../../mixin.scss" as *;
+@use "../../variables.scss";
 
 .course-selection {
   margin: 0 auto;
@@ -15,14 +10,13 @@ $text-color-2: #000000;
   @include page-heading-style;
   margin: 0;
   margin-bottom: 37px;
-  color: $text-color-2;
+  color: variables.$text-color-2;
 }
 
 .course-selection__text {
-  margin: 0;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
   padding-right: 54px;
-  color: $text-color-2;
+  color: variables.$text-color-2;
   text-transform: uppercase;
 
   &:last-of-type {

@@ -1,5 +1,4 @@
-$main-color-1: #ffffff;
-$main-color-2: #68b738;
+@use "../../variables.scss";
 
 .gift {
   margin: 0 auto;
@@ -9,7 +8,7 @@ $main-color-2: #68b738;
 .gift__inner {
   width: 280px;
   height: 290px;
-  background-color: $main-color-2;
+  background-color: variables.$main-color-2;
   background-image: url("../img/catalog/gift-background.jpg");
   background-size: cover;
 }
@@ -17,9 +16,9 @@ $main-color-2: #68b738;
 .gift__text {
   max-width: 162px;
   margin: 0 auto;
-  font-family: "Lato", "Aerial", sans-serif;
+  font-family: variables.$main-font-2;
   font-size: 16px;
   line-height: 20px;
-  color: $main-color-1;
+  color: variables.$main-color-1;
   text-align: center;
 }
