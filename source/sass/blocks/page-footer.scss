@@ -1,0 +1,12 @@
+@use "../variables.scss";
+
+.page-footer {
+  margin: 0;
+  padding: 40px 20px;
+  background-color: variables.$main-color-3;
+}
+
+.page-footer__link {
+  margin: 0 auto;
+  padding-bottom: 20px;
+}

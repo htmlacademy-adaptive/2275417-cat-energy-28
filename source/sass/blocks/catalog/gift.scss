@@ -1,0 +1,24 @@
+@use "../../variables.scss";
+
+.gift {
+  margin: 0 auto;
+  padding: 35px 20px;
+}
+
+.gift__inner {
+  width: 280px;
+  height: 290px;
+  background-color: variables.$main-color-2;
+  background-image: url("../img/catalog/gift-background.jpg");
+  background-size: cover;
+}
+
+.gift__text {
+  max-width: 162px;
+  margin: 0 auto;
+  font-family: variables.$main-font-2;
+  font-size: 16px;
+  line-height: 20px;
+  color: variables.$main-color-1;
+  text-align: center;
+}

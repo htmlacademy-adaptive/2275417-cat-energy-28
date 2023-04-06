@@ -1,0 +1,19 @@
+@use "../../mixin.scss" as *;
+@use "../../variables.scss";
+
+.products-catalog {
+  margin: 0;
+  padding: 27px 20px 0;
+}
+
+.products-catalog__title {
+  @include page-heading-style;
+  margin: 0 0 41px;
+  color: variables.$text-color-2;
+}
+
+.products-catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}

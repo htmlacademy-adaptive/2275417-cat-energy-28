@@ -1,0 +1,17 @@
+@use "../variables.scss";
+
+.developer {
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
+.developer__link {
+  text-decoration: none;
+}
+
+.developer__text {
+  font-family: variables.$main-font-2;
+  font-size: 16px;
+  line-height: 19px;
+  color: variables.$text-color-1;
+}
