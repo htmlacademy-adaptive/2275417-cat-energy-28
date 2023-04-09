@@ -4,13 +4,28 @@
 .course-selection {
   margin: 0 auto;
   padding: 27px 20px 32px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 65px 30px 72px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 74px 110px 82px;
+  }
 }
 
 .course-selection__title {
   @include page-heading-style;
-  margin: 0;
-  margin-bottom: 37px;
+  margin: 0 0 37px;
   color: variables.$text-color-2;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-left: 39px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0;
+  }
 }
 
 .course-selection__text {
@@ -21,5 +36,13 @@
 
   &:last-of-type {
     margin-bottom: 39px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding-left: 40px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0;
   }
 }

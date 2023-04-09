@@ -19,25 +19,23 @@
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="index.html">
-              <span class="main-nav__text">главная</span>
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link" href="catalog.html">
-              <span class="main-nav__text">каталог продукции</span>
-            </a>
-          </li>
-          <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--current" href="form.html">
-              <span class="main-nav__text">подбор программы</span>
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="index.html">
+            <span class="main-nav__text">главная</span>
+          </a>
+        </li>
+        <li class="main-nav__item  main-nav__item--catalog">
+          <a class="main-nav__link" href="catalog.html">
+            <span class="main-nav__text">каталог продукции</span>
+          </a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link main-nav__link--current" href="form.html">
+            <span class="main-nav__text">подбор программы</span>
+          </a>
+        </li>
+      </ul>
     </nav>
   </header>
   <main class="main-form">
@@ -46,54 +44,58 @@
       <p class="course-selection__text">Заполните анкету, и мы подберем
         программу питания для вашего кота</p>
       <form class="course-selection__form form" action="https://echo.htmlacademy.ru" method="post">
-        <fieldset class="form__group form__group--cat-data">
-          <span class="visually-hidden">Данные кота</span>
-          <label class="form__label">
-            <span class="form__text">Имя:*</span>
-            <input class="form__input" type="text" name="name" required placeholder="барсик">
-          </label>
-          <label class="form__label">
-            <span class="form__text">Вес (кг):*</span>
-            <input class="form__input" type="number" name="weight" required placeholder="7">
-          </label>
-          <label class="form__label">
-            <span class="form__text">Возраст (лет):</span>
-            <input class="form__input" type="number" name="age" required placeholder="7">
-          </label>
-        </fieldset>
-        <fieldset class="form__group form__group--course-type">
-          <span class="visually-hidden">Тип программы</span>
-          <ul class="form__list">
-            <li class="form__item">
-              <label class="form__radio-label">
-                <span class="form__radio-text">похудение</span>
-                <input class="form__radio-input" type="radio" name="course-type" value="похудение" checked>
-              </label>
-            </li>
-            <li class="form__item">
-              <label class="form__radio-label">
-                <span class="form__radio-text">Набор массы</span>
-                <input class="form__radio-input" type="radio" name="course-type" value="Набор массы">
-              </label>
-            </li>
-            <li class="form__item">
-              <label class="form__radio-label">
-                <span class="form__radio-text">Не знаю (Нужен ваш совет)</span>
-                <input class="form__radio-input" type="radio" name="course-type" value="Нужен совет">
-              </label>
-            </li>
-          </ul>
-        </fieldset>
+        <div class="form__container">
+          <fieldset class="form__group form__group--cat-data">
+            <span class="visually-hidden">Данные кота</span>
+            <label class="form__label">
+              <span class="form__text">Имя:*</span>
+              <input class="form__input" type="text" name="name" required placeholder="барсик">
+            </label>
+            <label class="form__label">
+              <span class="form__text">Вес (кг):*</span>
+              <input class="form__input" type="number" name="weight" required placeholder="7">
+            </label>
+            <label class="form__label">
+              <span class="form__text">Возраст (лет):</span>
+              <input class="form__input" type="number" name="age" required placeholder="7">
+            </label>
+          </fieldset>
+          <fieldset class="form__group form__group--course-type">
+            <span class="visually-hidden">Тип программы</span>
+            <ul class="form__list">
+              <li class="form__item">
+                <label class="form__radio-label">
+                  <span class="form__radio-text">похудение</span>
+                  <input class="form__radio-input" type="radio" name="course-type" value="похудение" checked>
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__radio-label">
+                  <span class="form__radio-text">Набор массы</span>
+                  <input class="form__radio-input" type="radio" name="course-type" value="Набор массы">
+                </label>
+              </li>
+              <li class="form__item">
+                <label class="form__radio-label">
+                  <span class="form__radio-text">Не знаю (Нужен ваш совет)</span>
+                  <input class="form__radio-input" type="radio" name="course-type" value="Нужен совет">
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+        </div>
         <fieldset class="form__group form__group--contacts">
           <h2 class="form__title form__title--contacts">Контактные данные (владельца кота)</h2>
-          <label class="form__label">
-            <span class="form__text">E-mail:*</span>
-            <input class="form__input" type="email" name="email" required placeholder="kuklachev@gmail.com">
-          </label>
-          <label class="form__label">
-            <span class="form__text">Телефон:*</span>
-            <input class="form__input" type="tel" name="phone number" required placeholder="8 (960) 900-60-90">
-          </label>
+          <div class="form__group-inner">
+            <label class="form__label form__label--contacts">
+              <span class="form__text">E-mail:*</span>
+              <input class="form__input" type="email" name="email" required placeholder="kuklachev@gmail.com">
+            </label>
+            <label class="form__label form__label--contacts">
+              <span class="form__text">Телефон:*</span>
+              <input class="form__input" type="tel" name="phone number" required placeholder="8 (960) 900-60-90">
+            </label>
+          </div>
         </fieldset>
         <fieldset class="form__group form__group--comment">
           <h2 class="form__title form__title--comment">Комментарий</h2>
@@ -105,44 +107,50 @@
         </fieldset>
         <fieldset class="form__group form__group--extra">
           <h2 class="form__title form__title--extra">Дополнительно</h2>
-          <ul class="form__list">
-            <li class="form__item">
+          <ul class="form__checkbox-list">
+            <li class="form__checkbox-item">
               <label class="form__checkbox-label">
                 <span class="form__checkbox-text">сахарозаменитель</span>
                 <input class="form__checkbox-input" type="checkbox" name="sugar substitute" value="сахарозаменитель"
                   checked>
               </label>
             </li>
-            <li class="form__item">
+            <li class="form__checkbox-item">
               <label class="form__checkbox-label">
                 <span class="form__checkbox-text">питьевая вода</span>
                 <input class="form__checkbox-input" type="checkbox" name="drinking water" value="питьевая вода">
               </label>
             </li>
-            <li class="form__item">
+            <li class="form__checkbox-item">
               <label class="form__checkbox-label">
                 <span class="form__checkbox-text">молоко</span>
                 <input class="form__checkbox-input" type="checkbox" name="milk" value="молоко">
               </label>
             </li>
-            <li class="form__item">
+            <li class="form__checkbox-item">
               <label class="form__checkbox-label">
                 <span class="form__checkbox-text">витамины</span>
                 <input class="form__checkbox-input" type="checkbox" name="vitamins" value="витамины">
               </label>
             </li>
+            <li class="form__checkbox-item form__checkbox-item--button">
+              <button class="form__button button" type="submit">отправить заявку</button>
+            </li>
+            <li class="form__checkbox-item form__checkbox-item--legend">
+              <p class="form__legend">* — Обязательные поля</p>
+            </li>
           </ul>
         </fieldset>
-        <button class="form__button button" type="submit">отправить заявку</button>
-        <p class="form__legend">* — Обязательные поля</p>
       </form>
     </section>
     <section class="contacts contacts--alter-background">
-      <h2 class="contacts__title">приглашаем к сотрудничеству дилеров!</h2>
-      <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="contacts__wrapper">
+        <h2 class="contacts__title">приглашаем к сотрудничеству дилеров!</h2>
+        <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      </div>
       <iframe class="contacts__map"
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.32085871595826!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1680280165520!5m2!1sen!2sru"
-        width="100%" height="362" style="border: 0;" allowfullscreen="" loading="lazy"
+        style="border: 0;" allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
     </section>

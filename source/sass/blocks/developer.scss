@@ -1,8 +1,12 @@
 @use "../variables.scss";
 
 .developer {
-  margin: 0 auto;
-  padding-top: 20px;
+  margin: 0;
+  padding: 20px 0;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0;
+  }
 }
 
 .developer__link {

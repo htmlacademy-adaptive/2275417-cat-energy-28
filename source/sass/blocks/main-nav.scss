@@ -1,12 +1,45 @@
 @use "../variables.scss";
 
 .main-nav__list {
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   list-style-type: none;
+
+  @media (min-width: variables.$tablet-width) {
+    flex-direction: row;
+  }
 }
 
 .main-nav__item {
   padding: 22px 0 24px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 18px 0;
+    margin-right: 34px;
+
+    &--catalog {
+      margin-right: 36px;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 18px 0;
+    margin-right: 37px;
+
+    &--catalog {
+      margin-right: 32px;
+    }
+  }
 }
+
 
 .main-nav__link {
   text-decoration: none;
@@ -22,5 +55,7 @@
 }
 
 .main-nav__toggle {
-  display: inline-block;
+  @media (min-width: variables.$tablet-width) {
+    display: none;
+  }
 }

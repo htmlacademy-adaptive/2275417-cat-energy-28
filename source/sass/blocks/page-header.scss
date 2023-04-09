@@ -1,7 +1,22 @@
+@use "../variables.scss";
+
 .page-header {
-  padding: 10px 20px 0;
+  position: relative;
+  max-height: fit-content;
+  padding: 10px 20px 17px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 30px 0 31px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 53px 110px 0;
+  }
 }
 
 .page-header__logo {
-  padding-bottom: 17px;
+  max-width: fit-content;
+  max-height: 38px;
 }
