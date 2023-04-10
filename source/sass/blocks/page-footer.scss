@@ -2,11 +2,31 @@
 
 .page-footer {
   margin: 0;
-  padding: 40px 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
   background-color: variables.$main-color-3;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 55px 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 66px 110px;
+  }
 }
 
 .page-footer__link {
-  margin: 0 auto;
-  padding-bottom: 20px;
+  margin: 0;
+  padding: 20px 0;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0;
+  }
 }

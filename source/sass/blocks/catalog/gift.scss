@@ -1,16 +1,17 @@
 @use "../../variables.scss";
 
 .gift {
-  margin: 0 auto;
-  padding: 35px 20px;
-}
-
-.gift__inner {
-  width: 280px;
+  width: 100%;
   height: 290px;
+  margin: 0 auto;
   background-color: variables.$main-color-2;
   background-image: url("../img/catalog/gift-background.jpg");
   background-size: cover;
+
+  @media (min-width: variables.$desktop-width) {
+    width: 245px;
+    margin: 0;
+  }
 }
 
 .gift__text {

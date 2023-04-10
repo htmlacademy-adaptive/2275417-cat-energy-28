@@ -2,7 +2,15 @@
 
 .additional-products {
   margin: 0 auto;
-  padding: 25px 20px 0;
+  padding: 25px 20px 35px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 31px 76px 30px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 110px 86px;
+  }
 }
 
 .additional-products__title {
@@ -11,10 +19,29 @@
   font-size: 24px;
   line-height: 24px;
   color: variables.$text-color-2;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 0 0 37px;
+  }
 }
 
 .additional-products__list {
-  margin: 0;
+  margin: 0 0 35px;
   padding: 0;
   list-style-type: none;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 69px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0;
+  }
+}
+
+.additional-products__container {
+  @media (min-width: variables.$desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
