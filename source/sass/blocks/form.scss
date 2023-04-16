@@ -400,16 +400,6 @@
   }
 }
 
-.form__input::-webkit-outer-spin-button,
-.form__input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-.form__input[type="number"] {
-  -moz-appearance: textfield;
-}
-
 .form__input-icon {
   position: absolute;
   top: 12px;
