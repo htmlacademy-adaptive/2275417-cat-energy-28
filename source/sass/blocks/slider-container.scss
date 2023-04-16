@@ -1,0 +1,86 @@
+@use "../variables.scss";
+
+.slider-container {
+  position: relative;
+  min-width: 280px;
+  min-height: 256px;
+
+  @media (min-width: variables.$tablet-width) {
+    min-width: 560px;
+    min-height: 512px;
+  }
+}
+
+.slider-container__button {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-20px);
+  width: 40px;
+  height: 100%;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 18px;
+    z-index: 2;
+    width: 4px;
+    height: 100%;
+    content: "";
+    background-color: variables.$button-icon-color-2;
+    border: none;
+    border-radius: 2px;
+  }
+}
+
+.slider-container__button:hover::before {
+  background-color: variables.$main-color-2;
+}
+
+.slider-container__button:active::before {
+  background-color: rgba(variables.$button-active-color-1, 0.6);
+}
+
+.slider-container__button:hover .slider-container__thumb {
+  color: variables.$main-color-2;
+  stroke: variables.$main-color-2;
+}
+
+.slider-container__button:active .slider-container__thumb {
+  color: rgba(variables.$button-active-color-1, 0.6);
+  stroke: rgba(variables.$button-active-color-1, 0.6);
+}
+
+.slider-container__image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto 0;
+  object-fit: cover;
+  object-position: left center;
+
+  &--before {
+    left: 0;
+    width: 50%;
+  }
+
+  &--after {
+    width: 50%;
+    margin-left: auto;
+    object-position: right center;
+  }
+}
+
+.slider-container__thumb {
+  position: relative;
+  z-index: 3;
+  color: variables.$button-icon-color-2;
+  stroke: variables.$button-icon-color-2;
+}

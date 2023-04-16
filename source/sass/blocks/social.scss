@@ -12,9 +12,23 @@
 .social__list {
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 24px;
   list-style-type: none;
 }
 
 .social__link {
+  color: variables.$button-icon-color-2;
   text-decoration: none;
+}
+
+.social__link:hover .social__icon {
+  color: variables.$main-color-2;
+}
+
+.social__link:active .social__icon {
+  color: variables.$main-color-2;
+  opacity: 0.3;
 }

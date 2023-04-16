@@ -1,0 +1,15 @@
+@use "../variables.scss";
+
+.container {
+  width: 100%;
+  min-height: 100%;
+  padding: 0 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0 30px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 110px;
+  }
+}

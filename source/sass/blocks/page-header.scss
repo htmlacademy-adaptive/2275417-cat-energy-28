@@ -3,12 +3,37 @@
 .page-header {
   position: relative;
   max-height: fit-content;
-  padding: 10px 20px 17px;
-  display: flex;
-  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: variables.$desktop-width) {
+    &--index::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 50%;
+      width: 720px;
+      height: 694px;
+      display: block;
+      background-color: variables.$main-color-2;
+      background-image: url("../img/main/index-background-desktop.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -1;
+    }
+  }
+}
+
+
+.page-header__container {
+  padding: 10px 0 0;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 0 30px 0 31px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+    margin: 0;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -16,7 +41,32 @@
   }
 }
 
+.page-header__inner {
+  padding: 0 20px;
+  border-bottom: 1px solid variables.$extra-color-1;
+
+  &--index {
+    border: none;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0;
+    border: none;
+  }
+}
+
 .page-header__logo {
+  display: block;
+  margin-bottom: 16px;
   max-width: fit-content;
   max-height: 38px;
+
+  &--index {
+    margin-bottom: 17px;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 0;
+  }
 }
+

@@ -1,0 +1,50 @@
+@use "../variables.scss";
+
+.main-guide {
+  margin: 0 auto;
+}
+
+.main-guide__container {
+  padding: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding-bottom: 45px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 82px 110px 71px;
+  }
+}
+
+.main-guide__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: variables.$desktop-width) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+  }
+}
+
+.main-guide__item {
+  margin: 0 0 20px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 0 30px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    max-width: 570px;
+    margin: 0;
+  }
+}

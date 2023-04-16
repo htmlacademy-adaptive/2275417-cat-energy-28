@@ -8,6 +8,16 @@
   line-height: 20px;
   background-color: variables.$main-color-2;
   color: variables.$main-color-1;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: variables.$button-active-color-1;
+  }
+
+  &:active {
+    background-color: variables.$button-active-color-1;
+    color: rgba(variables.$main-color-1, 0.3);
+  }
 }

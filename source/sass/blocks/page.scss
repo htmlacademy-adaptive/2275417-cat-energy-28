@@ -5,7 +5,7 @@
 }
 
 .page__body {
-  width: 320px;
+  width: 100%;
   max-width: 1440px;
   display: flex;
   flex-direction: column;
@@ -16,12 +16,4 @@
   line-height: 18px;
   background-color: variables.$main-color-1;
   color: variables.$text-color-1;
-
-  @media (min-width: variables.$tablet-width) {
-    width: 769px;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    width: 1440px;
-  }
 }

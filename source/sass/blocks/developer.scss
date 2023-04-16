@@ -6,11 +6,20 @@
 
   @media (min-width: variables.$tablet-width) {
     padding: 0;
+    min-width: 168px;
   }
 }
 
 .developer__link {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   text-decoration: none;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .developer__text {
@@ -18,4 +27,16 @@
   font-size: 16px;
   line-height: 19px;
   color: variables.$text-color-1;
+}
+
+.developer__icon {
+  color: variables.$button-icon-color-2;
+}
+
+.developer__link:hover .developer__icon {
+  color: variables.$main-color-2;
+}
+
+.developer__link:active .developer__icon {
+  color: variables.$main-color-2;
 }
