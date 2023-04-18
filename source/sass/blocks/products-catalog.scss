@@ -1,0 +1,90 @@
+@use "../mixin.scss" as *;
+@use "../variables.scss";
+
+.products-catalog {
+  margin: 0;
+  padding: 27px 0 0 0;
+  overflow: hidden;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 65px 0 68px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 74px 0 75px;
+  }
+}
+
+.products-catalog__title {
+  @include page-heading-style;
+  margin: 0 0 41px;
+  padding: 0;
+  color: variables.$text-color-2;
+
+  @media (min-width: variables.$tablet-width) {
+    @include heading-tablet;
+    margin-bottom: 163px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 165px;
+  }
+}
+
+.products-catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  @media (min-width: variables.$tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 142px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 80px;
+    row-gap: 144px;
+  }
+}
+
+.products-catalog__item {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    height: 1px;
+    width: calc(100vw + 20px);
+    background-color: #ebebeb;
+    content: "";
+  }
+
+  &:last-of-type {
+    &::after {
+      position: absolute;
+      top: calc(100% - 1px);
+      left: -20px;
+      height: 1px;
+      width: calc(100vw + 20px);
+      background-color: #ebebeb;
+      content: "";
+    }
+
+    @media (min-width: variables.$tablet-width) {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,216 @@
+@use "../mixin.scss" as *;
+@use "../variables.scss";
+
+.living-example {
+  padding: 25px 0 40px;
+  background-color: variables.$living-example-background-color;
+
+  @media (min-width: variables.$tablet-width) {
+    position: relative;
+    padding: 43px 0 100px;
+    background-color: transparent;
+
+    &::before {
+      position: absolute;
+      top: 57%;
+      left: 0;
+      z-index: -1;
+      width: 100%;
+      height: 43%;
+      content: "";
+      background-color: variables.$living-example-background-color;
+    }
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0 0 75px;
+
+    &::before {
+      top: 23%;
+      height: 77%;
+    }
+  }
+}
+
+.living-example__container {
+  @media (min-width: variables.$desktop-width) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.living-example__content-container {
+  @media (min-width: variables.$desktop-width) {
+    max-width: 436px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.living-example__title {
+  margin: 0 0 40px;
+  padding: 0;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 40px;
+  color: variables.$text-color-2;
+
+  @media (min-width: variables.$tablet-width) {
+    @include heading-tablet;
+    margin-bottom: 63px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 146px;
+  }
+}
+
+.living-example__text {
+  margin: 0 0 20px;
+  font-family: variables.$main-font-2;
+
+  @media (min-width: variables.$tablet-width) {
+    @include text-tablet;
+    margin-bottom: 54px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 69px;
+    max-width: 433px;
+  }
+}
+
+.living-example__stats-wrapper {
+  position: relative;
+  z-index: 0;
+  min-width: 124px;
+  min-height: 56px;
+  padding: 13px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid variables.$extra-color-2;
+  border-radius: 3px;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 14px 0 0 0;
+    min-width: 162px;
+    min-height: 72px;
+  }
+}
+
+.living-example__stats-list {
+  margin: 0 0 34px;
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0;
+    max-width: fit-content;
+    justify-content: flex-start;
+    column-gap: 42px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin-bottom: 60px;
+  }
+}
+
+.living-example__inner {
+  margin-bottom: 20px;
+
+  @media (min-width: variables.$tablet-width) {
+    margin-bottom: 104px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0;
+    display: block;
+  }
+}
+
+.living-example__stats-number {
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: variables.$text-color-2;
+
+  @media (min-width: variables.$tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.living-example__stats-description {
+  position: absolute;
+  top: 80%;
+  left: 0;
+  right: 0;
+  transform: translateX(-1px);
+  z-index: 1;
+  width: 87px;
+  margin: 0 auto;
+  padding: 0 0 0 6px;
+  font-family: variables.$main-font-2;
+  font-size: 12px;
+  line-height: 12px;
+  background-color: variables.$living-example-background-color;
+  text-align: center;
+
+  @media (min-width: variables.$tablet-width) {
+    top: 90%;
+    transform: translateX(0);
+    padding: 0 9px 0 8px;
+    width: fit-content;
+    font-size: 14px;
+    line-height: 14px;
+    background-color: variables.$main-color-1;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    background-color: variables.$living-example-background-color;
+  }
+}
+
+.living-example__subheading {
+  margin: 0 auto;
+  max-width: fit-content;
+  font-size: 14px;
+  line-height: 20px;
+  color: variables.$text-color-2;
+  text-align: center;
+  text-transform: uppercase;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0;
+    padding: 11px 0 0 0;
+    max-width: 175px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 9px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: end;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 0;
+    max-width: fit-content;
+    flex-direction: row;
+    row-gap: 0;
+    column-gap: 63px;
+  }
+}
+
+.living-example__slider {
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 75px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 10px;
+  }
+}
