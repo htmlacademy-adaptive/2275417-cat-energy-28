@@ -2,27 +2,16 @@
 @use "../variables.scss";
 
 .product-overview {
-  margin: 0 auto;
+  padding: 0 0 49px;
 
   @media (min-width: variables.$tablet-width) {
+    padding: 0 0 47px;
     border-bottom: 1px solid #e6e6e6;
   }
 
   @media (min-width: variables.$desktop-width) {
+    padding: 0 0 69px;
     border: none;
-  }
-}
-
-.product-overview__container {
-  padding-bottom: 49px;
-
-  @media (min-width: variables.$tablet-width) {
-    padding-right: 105px;
-    padding-bottom: 47px;
-  }
-
-  @media (min-width: variables.$desktop-width) {
-    padding-bottom: 69px;
   }
 }
 
@@ -46,10 +35,13 @@
   list-style-type: none;
 
   @media (min-width: variables.$tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    row-gap: 37px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 37px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 

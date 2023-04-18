@@ -2,11 +2,9 @@
 @use "../variables.scss";
 
 .course-selection {
-  margin: 0 auto;
-}
-
-.course-selection__container {
+  margin: 0;
   padding: 27px 0 0;
+  overflow-x: clip;
 
   @media (min-width: variables.$tablet-width) {
     padding: 65px 0 0;
@@ -19,36 +17,36 @@
 
 .course-selection__title {
   @include page-heading-style;
-  margin: 0 20px 37px;
+  margin: 0 0 37px;
   padding: 0;
   color: variables.$text-color-2;
 
   @media (min-width: variables.$tablet-width) {
     @include heading-tablet;
-    margin: 0 67px 54px 69px;
+    margin: 0 37px 54px 39px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 0 110px 56px;
+    margin: 0 0 56px;
   }
 }
 
 .course-selection__text {
-  margin: 0 20px 10px;
+  margin: 0 0 10px;
   padding: 0;
   max-width: 226px;
   color: variables.$text-color-2;
   text-transform: uppercase;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 0 20px 70px;
+    margin: 0 0 20px 40px;
     max-width: 323px;
     font-size: 20px;
     line-height: 30px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    margin: 0 110px 30px;
+    margin: 0 0 30px;
   }
 
   &:last-of-type {

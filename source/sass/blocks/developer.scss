@@ -1,16 +1,13 @@
 @use "../variables.scss";
 
 .developer {
-  margin: 0;
-  padding: 20px 0;
-
   @media (min-width: variables.$tablet-width) {
-    padding: 0;
     min-width: 168px;
   }
 }
 
 .developer__link {
+  padding: 4px 0 0;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -19,6 +16,10 @@
 
   &:active {
     opacity: 0.3;
+  }
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0;
   }
 }
 

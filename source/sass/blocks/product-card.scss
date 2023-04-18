@@ -3,16 +3,7 @@
 .product-card {
   width: 100%;
   margin: 0;
-  padding: 19px 20px 25px;
-  border-top: 1px solid #ebebeb;
-
-  &:last-of-type {
-    border-bottom: 1px solid #ebebeb;
-
-    @media (min-width: variables.$tablet-width) {
-      border: 2px solid variables.$main-color-3;
-    }
-  }
+  padding: 19px 0 25px;
 
   @media (min-width: variables.$tablet-width) {
     width: 324px;
@@ -35,35 +26,41 @@
 
   &--more {
     padding-top: 25px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    &::before {
-      width: 30px;
-      height: 30px;
-      margin-bottom: 23px;
-      content: "";
-      background-image: url("../../img/catalog/icon-plus-more.svg");
-      background-position: center;
-      background-repeat: no-repeat;
-      object-fit: contain;
-
-      @media (min-width: variables.$tablet-width) {
-        width: 60px;
-        height: 60px;
-        margin-bottom: 49px;
-        background-image: url("../../img/catalog/icon-plus-more-tablet.svg");
-      }
-    }
 
     @media (min-width: variables.$tablet-width) {
       padding-top: 52px;
       background-color: variables.$main-color-1;
+      border: 2px solid variables.$main-color-3;
     }
 
     @media (min-width: variables.$desktop-width) {
       padding-top: 51px;
+    }
+  }
+}
+
+.product-card__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+
+  &::before {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 23px;
+    content: "";
+    background-image: url("../../img/catalog/icon-plus-more.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    object-fit: contain;
+
+    @media (min-width: variables.$tablet-width) {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 49px;
+      background-image: url("../../img/catalog/icon-plus-more-tablet.svg");
     }
   }
 }

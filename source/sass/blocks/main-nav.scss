@@ -60,6 +60,7 @@
 }
 
 .main-nav__item {
+  position: relative;
   width: 100%;
   padding: 21px 0 23px;
   text-align: center;
@@ -81,39 +82,79 @@
 }
 
 .main-nav--nojs .main-nav__item {
-  border-bottom: 1px solid variables.$extra-color-1;
+  &::after {
+    position: absolute;
+    top: calc(100% - 1px);
+    left: -20px;
+    width: 100vw;
+    height: 1px;
+    background-color: variables.$extra-color-1;
+    content: "";
+  }
 
   @media (min-width: variables.$tablet-width) {
-    border: none;
+    &::after {
+      display: none;
+    }
   }
 }
 
-.main-nav--index.main-nav--nojs .main-nav__item:first-of-type {
-  border-top: 1px solid variables.$extra-color-1;
+.main-nav--nojs .main-nav__item:first-of-type {
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: calc(100vw + 20px);
+    height: 1px;
+    background-color: variables.$extra-color-1;
+    content: "";
+  }
 
   @media (min-width: variables.$tablet-width) {
-    border: none;
+    &::before {
+      display: none;
+    }
   }
 }
 
 .main-nav--opened .main-nav__item {
-  border-bottom: 1px solid variables.$extra-color-1;
+  &::after {
+    position: absolute;
+    top: calc(100% - 1px);
+    left: -20px;
+    width: calc(100vw + 20px);
+    height: 1px;
+    background-color: variables.$extra-color-1;
+    content: "";
+  }
 
   @media (min-width: variables.$tablet-width) {
-    border: none;
+    &::after {
+      display: none;
+    }
   }
 }
 
 .main-nav--index.main-nav--opened .main-nav__item:first-of-type {
-  border-top: 1px solid variables.$extra-color-1;
+  &::before {
+    position: absolute;
+    top: 0;
+    left: -20px;
+    width: calc(100vw + 20px);
+    height: 1px;
+    background-color: variables.$extra-color-1;
+    content: "";
+  }
 
   @media (min-width: variables.$tablet-width) {
-    border: none;
+    &::before {
+      display: none;
+    }
   }
 }
 
 .main-nav__link {
-  padding: 16px 50px;
+  padding: 20px;
   text-decoration: none;
 
   @media (min-width: variables.$tablet-width) {
@@ -178,7 +219,7 @@
 .main-nav__toggle {
   position: absolute;
   top: 14px;
-  right: 6.25%;
+  right: 20px;
   margin: 0;
   padding: 0;
   width: 32px;

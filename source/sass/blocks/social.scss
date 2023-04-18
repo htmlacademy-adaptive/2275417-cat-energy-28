@@ -1,14 +1,5 @@
 @use "../variables.scss";
 
-.social {
-  margin: 0;
-  padding: 20px 0;
-
-  @media (min-width: variables.$tablet-width) {
-    padding: 0;
-  }
-}
-
 .social__list {
   margin: 0;
   padding: 0;
@@ -20,8 +11,14 @@
 }
 
 .social__link {
+  padding: 4px 0;
+  display: flex;
   color: variables.$button-icon-color-2;
   text-decoration: none;
+
+  @media (min-width: variables.$tablet-width) {
+    padding: 0;
+  }
 }
 
 .social__link:hover .social__icon {

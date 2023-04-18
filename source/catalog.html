@@ -10,7 +10,7 @@
 
 <body class="page__body">
   <header class="page-header">
-    <div class="page-header__container">
+    <div class="page-header__container container">
       <div class="page-header__inner">
         <a class="page-header__logo company-logo" href="index.html">
           <img class="company-logo__image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
@@ -44,7 +44,7 @@
   </header>
   <main class="main-catalog">
     <section class="products-catalog">
-      <div class="products-catalog__container">
+      <div class="container">
         <h1 class="products-catalog__title">Каталог продукции</h1>
         <ul class="products-catalog__list">
           <li class="products-catalog__item product-card">
@@ -223,9 +223,11 @@
             <a class="product-card__button button" href="#">заказать</a>
           </li>
           <li class="products-catalog__item product-card product-card--more">
-            <p class="product-card__title product-card__title--more">Показать еще 100500 товаров</p>
-            <p class="product-card__text">На самом деле вкусов гораздо больше!</p>
-            <a class="product-card__button product-card__button--more button" href="#">показать все</a>
+            <div class="product-card__container">
+              <p class="product-card__title product-card__title--more">Показать еще 100500 товаров</p>
+              <p class="product-card__text">На самом деле вкусов гораздо больше!</p>
+              <a class="product-card__button product-card__button--more button" href="#">показать все</a>
+            </div>
           </li>
         </ul>
       </div>
@@ -276,19 +278,21 @@
       </div>
     </section>
     <section class="contacts contacts--alter-background">
-      <div class="contacts__wrapper">
-        <h2 class="contacts__title">приглашаем<br> к сотрудничеству дилеров!</h2>
-        <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="contacts__container container">
+        <div class="contacts__wrapper">
+          <h2 class="contacts__title">приглашаем<br> к сотрудничеству дилеров!</h2>
+          <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        </div>
+        <iframe class="contacts__map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.32085871595826!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1680280165520!5m2!1sen!2sru"
+            style="border: 0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
       </div>
-      <iframe class="contacts__map"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.32085871595826!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1680280165520!5m2!1sen!2sru"
-          style="border: 0;" allowfullscreen="" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade">
-      </iframe>
     </section>
   </main>
   <footer class="page-footer">
-    <div class="page-footer__container">
+    <div class="page-footer__container container">
       <section class="page-footer__section">
         <a class="page-footer__link" href="index.html">
           <svg class="page-footer__logo" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg"
@@ -366,7 +370,7 @@
       </section>
     </div>
   </footer>
-<script src="../source/js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 
 </html>

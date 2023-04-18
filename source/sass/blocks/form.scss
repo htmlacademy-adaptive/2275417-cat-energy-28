@@ -7,39 +7,60 @@
 .form__group {
   position: relative;
   margin: 0;
-  padding: 0 20px;
+  padding: 0;
   border: none;
 
   @media (min-width: variables.$tablet-width) {
-    padding-right: 67px;
-    padding-left: 70px;
+    padding-right: 37px;
+    padding-left: 40px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding-right: 110px;
-    padding-left: 110px;
+    padding: 0;
   }
 
   &--cat-data {
     padding-bottom: 24px;
 
     @media (min-width: variables.$tablet-width) {
-      padding-bottom: 0;
-    }
-
-    @media (min-width: variables.$desktop-width) {
       padding: 0;
     }
   }
 
   &--course-type {
+    position: relative;
     padding-top: 22px;
     padding-bottom: 19px;
-    border-top: 1px solid #d9d9d9;
-    border-bottom: 1px solid #d9d9d9;
+    margin-bottom: 26px;
+
+    &::before {
+      position: absolute;
+      top: 1px;
+      left: -20px;
+      width: calc(100vw + 20px);
+      height: 1px;
+      background-color: #d9d9d9;
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      top: calc(100% - 1px);
+      left: -20px;
+      width: calc(100vw + 20px);
+      height: 1px;
+      background-color: #d9d9d9;
+      content: "";
+    }
 
     @media (min-width: variables.$tablet-width) {
-      border: none;
+      margin: 0;
+      padding: 0;
+
+      &::before,
+      &::after {
+        display: none;
+      }
     }
 
     @media (min-width: variables.$desktop-width) {
@@ -49,11 +70,9 @@
   }
 
   &--contacts {
-    padding-top: 26px;
     padding-bottom: 24px;
 
     @media (min-width: variables.$tablet-width) {
-      padding-top: 0;
       padding-bottom: 65px;
     }
 
@@ -79,11 +98,11 @@
     padding-bottom: 34px;
 
     @media (min-width: variables.$tablet-width) {
-      padding: 0 165px 72px 70px;
+      padding: 0 135px 72px 40px;
     }
 
     @media (min-width: variables.$desktop-width) {
-      padding: 0 110px 82px;
+      padding: 0 0 82px;
     }
   }
 
@@ -91,48 +110,25 @@
     &::before {
       position: absolute;
       top: 14px;
-      right: 0;
+      right: -20px;
       z-index: -1;
-      width: 80%;
+      width: calc(100vw - 40px);
       height: 2px;
       background-color: variables.$main-color-2;
       content: "";
 
       @media (min-width: variables.$tablet-width) {
         top: 22px;
+        right: -100vw;
+        width: 200vw;
       }
     }
-
-    &::after {
-      @media (min-width: variables.$tablet-width) {
-        position: absolute;
-        top: 22px;
-        left: 0;
-        z-index: -1;
-        width: 30px;
-        height: 2px;
-        background-color: variables.$main-color-2;
-        content: "";
-      }
-
-      @media (min-width: variables.$desktop-width) {
-        width: 70px;
-      }
-    }
-  }
-}
-
-.form__group--contacts.form__group--with-lines::before {
-  top: 41px;
-
-  @media (min-width: variables.$tablet-width) {
-    top: 22px;
   }
 }
 
 .form__container {
   @media (min-width: variables.$tablet-width) {
-    padding: 0 0 71px 0;
+    padding: 0 37px 71px 41px;
     display: flex;
     flex-direction: column;
     row-gap: 72px;
@@ -140,7 +136,7 @@
 
   @media (min-width: variables.$desktop-width) {
     margin: 0 0 69px;
-    padding: 0 110px;
+    padding: 0;
     flex-direction: row;
     justify-content: space-between;
     column-gap: 80px;
@@ -208,6 +204,13 @@
       padding-right: 41px;
       margin-bottom: 57px;
     }
+  }
+}
+
+.form__group--with-lines .form__title {
+  @media (min-width: variables.$tablet-width) {
+    margin-left: - 40px;
+    padding-left: 40px;
   }
 }
 
@@ -482,8 +485,9 @@
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 54px;
     display: grid;
-    grid-template-columns: 1fr auto;
-    gap: 32px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 64px;
+    row-gap: 32px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -501,14 +505,14 @@
 .form__extra-wrapper {
   @media (min-width: variables.$tablet-width) {
     display: grid;
-    grid-template-columns: 53% auto;
+    grid-template-columns: 1fr 1fr;
     align-items: center;
     column-gap: 64px;
     row-gap: 32px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    grid-template-columns: 46.5% auto;
+    grid-template-columns: 2fr 2fr;
     column-gap: 84px;
     row-gap: 40px;
   }

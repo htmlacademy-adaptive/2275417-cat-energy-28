@@ -1,18 +1,14 @@
 @use "../variables.scss";
 
 .main-guide {
-  margin: 0 auto;
-}
-
-.main-guide__container {
-  padding: 20px;
+  padding: 20px 0;
 
   @media (min-width: variables.$tablet-width) {
-    padding-bottom: 45px;
+    padding: 0 0 45px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 82px 110px 71px;
+    padding: 82px 0 71px;
   }
 }
 
@@ -22,8 +18,8 @@
   list-style-type: none;
 
   @media (min-width: variables.$desktop-width) {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     gap: 80px;
   }
 }

@@ -2,11 +2,12 @@
 @use "../variables.scss";
 
 .living-example {
-  margin: 0 auto;
+  padding: 25px 0 40px;
   background-color: variables.$living-example-background-color;
 
   @media (min-width: variables.$tablet-width) {
     position: relative;
+    padding: 43px 0 100px;
     background-color: transparent;
 
     &::before {
@@ -22,6 +23,8 @@
   }
 
   @media (min-width: variables.$desktop-width) {
+    padding: 0 0 75px;
+
     &::before {
       top: 23%;
       height: 77%;
@@ -30,14 +33,7 @@
 }
 
 .living-example__container {
-  padding: 25px 20px 40px;
-
-  @media (min-width: variables.$tablet-width) {
-    padding: 43px 30px 100px;
-  }
-
   @media (min-width: variables.$desktop-width) {
-    padding: 0 110px 75px;
     display: flex;
     justify-content: space-between;
   }

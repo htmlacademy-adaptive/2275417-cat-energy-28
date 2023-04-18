@@ -3,6 +3,7 @@
 .additional-products {
   position: relative;
   margin: 0;
+  padding: 25px 0 35px;
 
   &::before {
     position: absolute;
@@ -18,37 +19,14 @@
       top: 22px;
       width: 100%;
     }
-
-    @media (min-width: variables.$desktop-width) {
-      width: 80%;
-    }
   }
-
-  &::after {
-    @media (min-width: variables.$desktop-width) {
-      position: absolute;
-      top: 22px;
-      left: 0;
-      z-index: -1;
-      width: 5%;
-      height: 2px;
-      content: "";
-      background-color: variables.$main-color-2;
-    }
-  }
-}
-
-.additional-products__container {
-  padding-top: 25px;
-  padding-bottom: 35px;
 
   @media (min-width: variables.$tablet-width) {
-    padding-top: 0;
-    padding-bottom: 76px;
+    padding: 0 0 76px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding-bottom: 86px;
+    padding: 0 0 86px;
   }
 }
 
@@ -70,7 +48,8 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 0 35px 0 0;
+    margin-left: -40px;
+    padding: 0 35px 0 40px;
   }
 }
 
