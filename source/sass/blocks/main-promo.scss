@@ -23,10 +23,6 @@
     @media (min-resolution: 2dppx) {
       background-image: url("../../img/main/promo-background-mobile-2x.jpg");
     }
-
-    @media (min-resolution: 4dppx) {
-      background-image: url("../../img/main/promo-background-mobile-4x.jpg");
-    }
   }
 
   @media (min-width: variables.$tablet-width) {
@@ -51,10 +47,6 @@
 
       @media (min-resolution: 2dppx) {
         background-image: url("../../img/main/promo-background-desktop-2x.jpg");
-      }
-
-      @media (min-resolution: 4dppx) {
-        background-image: url("../../img/main/promo-background-desktop-4x.jpg");
       }
     }
   }
