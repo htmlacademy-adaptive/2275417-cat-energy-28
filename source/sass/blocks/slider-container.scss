@@ -2,11 +2,12 @@
 
 .slider-container {
   position: relative;
+  margin: 0 auto;
   display: flex;
+  width: fit-content;
   justify-content: center;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 auto;
     width: 560px;
     height: 512px;
   }
