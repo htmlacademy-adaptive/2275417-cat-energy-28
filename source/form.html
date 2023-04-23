@@ -4,6 +4,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="img/favicons/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
+  <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
@@ -13,7 +17,11 @@
     <div class="page-header__container container">
       <div class="page-header__inner">
         <a class="page-header__logo company-logo" href="index.html">
-          <img class="company-logo__image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
+          <picture>
+            <source media="(min-width: 1440px)" width="202" height="59" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" width="174" height="52" srcset="img/logo-tablet.svg">
+            <img class="company-logo__image" src="img/logo-mobile.svg" width="191" height="38" alt="Логотип Cat Energy">
+          </picture>
         </a>
       </div>
       <!--to show toggle button, first remove "main-nav--nojs",
