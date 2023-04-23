@@ -124,6 +124,18 @@
   }
 }
 
+.main-promo__image {
+  @media (min-width: variables.$tablet-width) {
+    width: 709px;
+    height: 609px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 552px;
+    height: 499px;
+  }
+}
+
 .main-promo__button {
   width: 100%;
   height: fit-content;

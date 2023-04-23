@@ -1,3 +1,5 @@
+@use "../variables.scss";
+
 .company-logo {
   padding-right: 40px;
   max-width: fit-content;
@@ -8,5 +10,17 @@
 
   &:active {
     opacity: 0.6;
+  }
+}
+
+.company-logo__image {
+  @media (min-width: variables.$tablet-width) {
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 202px;
+    height: 59px;
   }
 }
