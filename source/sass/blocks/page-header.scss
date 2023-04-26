@@ -46,14 +46,15 @@
 
 .page-header__logo {
   display: flex;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   max-width: fit-content;
 
-  &--index {
-    margin-bottom: 17px;
+  @media (min-width: variables.$tablet-width) {
+    transform: translateX(1px);
+    margin-bottom: 0;
   }
 
-  @media (min-width: variables.$tablet-width) {
-    margin-bottom: 0;
+  @media (min-width: variables.$desktop-width) {
+    transform: translate(0);
   }
 }

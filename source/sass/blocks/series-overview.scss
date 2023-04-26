@@ -67,7 +67,7 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    padding: 77px 0 53px 52px;
+    padding: 77px 0 53px 53px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -108,13 +108,17 @@
 
   &:last-of-type {
     margin: 0 0 15px 0;
-    padding-bottom: 23px;
+    padding-bottom: 22px;
     border-bottom: 1px solid #d9d9d9;
 
     @media (min-width: variables.$tablet-width) {
       margin: 0 auto 48px 0;
       padding: 0;
       border: none;
+    }
+
+    @media (min-width: variables.$desktop-width) {
+      margin: 0 0 23px;
     }
   }
 
@@ -140,16 +144,8 @@
   column-gap: 15px;
   text-decoration: none;
 
-  &::after {
-    content: "";
-    width: 32px;
-    height: 10px;
-    background-color: inherit;
-    background-image: url("../../img/main/guide-icon-arrow.svg");
-    background-repeat: no-repeat;
-  }
-
   @media (min-width: variables.$tablet-width) {
+    transform: translateX(1px);
     margin: 0 auto 0 0;
     column-gap: 25px;
   }
@@ -159,12 +155,16 @@
   }
 }
 
-.series-overview__link:hover::after,
-.series-overview__link:active::after {
-  background-image: url("../../img/main/guide-icon-arrow-large.svg");
+.series-overview__icon {
+  transition: width 0.25s ease;
+}
+
+.series-overview__link:hover .series-overview__icon {
+  width: 32px;
 }
 
 .series-overview__link-text {
+  max-width: 80%;
   font-size: 16px;
   line-height: 16px;
   color: variables.$text-color-2;

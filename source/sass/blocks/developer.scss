@@ -28,6 +28,10 @@
   font-size: 16px;
   line-height: 19px;
   color: variables.$text-color-1;
+
+  @media (min-width: variables.$tablet-width) {
+    transform: translateY(1px);
+  }
 }
 
 .developer__icon {

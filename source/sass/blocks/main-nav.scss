@@ -24,7 +24,7 @@
 
 .main-nav__list {
   position: absolute;
-  top: 66px;
+  top: 64px;
   right: 0;
   z-index: 1;
   width: 100%;
@@ -39,7 +39,7 @@
 
   @media (min-width: variables.$tablet-width) {
     position: static;
-    max-width: 440px;
+    max-width: 446px;
     margin: 0;
     flex-direction: row;
     column-gap: 34px;
@@ -62,7 +62,7 @@
 .main-nav__item {
   position: relative;
   width: 100%;
-  padding: 21px 0 23px;
+  padding: 11px 0 13px;
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
@@ -70,7 +70,7 @@
     padding: 0;
 
     &--catalog {
-      margin-right: 2px;
+      margin-right: 4px;
     }
   }
 
@@ -135,7 +135,7 @@
   }
 }
 
-.main-nav--index.main-nav--opened .main-nav__item:first-of-type {
+.main-nav--opened .main-nav__item:first-of-type {
   &::before {
     position: absolute;
     top: 0;
@@ -154,22 +154,27 @@
 }
 
 .main-nav__link {
-  padding: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
   text-decoration: none;
 
   @media (min-width: variables.$tablet-width) {
     position: relative;
-    display: block;
     padding: 18px 0 16px;
 
     &--current::before {
       position: absolute;
-      top: 87.5%;
+      top: 82%;
       right: 0;
       width: 100%;
       height: 2px;
       content: "";
       background-color: variables.$main-color-2;
+
+      @media (min-width: variables.$desktop-width) {
+        top: 84%;
+      }
     }
   }
 
@@ -218,7 +223,7 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 14px;
+  top: 13px;
   right: 20px;
   margin: 0;
   padding: 0;
