@@ -5,7 +5,12 @@
   margin: 0 auto;
   display: flex;
   width: fit-content;
+  height: fit-content;
   justify-content: center;
+
+  @media (min-width: variables.$desktop-width) {
+    margin: 0 0 0 auto;
+  }
 }
 
 .slider-container__button {

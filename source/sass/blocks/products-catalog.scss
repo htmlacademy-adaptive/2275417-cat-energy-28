@@ -7,7 +7,7 @@
   overflow: hidden;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 65px 0 68px;
+    padding: 58px 0 68px;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -40,7 +40,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
-    row-gap: 142px;
+    row-gap: 140px;
   }
 
   @media (min-width: variables.$desktop-width) {

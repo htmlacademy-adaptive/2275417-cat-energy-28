@@ -4,10 +4,16 @@
   margin: 0;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   column-gap: 24px;
   list-style-type: none;
+
+  @media (min-width: variables.$tablet-width) {
+    margin: 0 0 0 22px;
+    transform: translateY(-1px);
+  }
 }
 
 .social__link {
@@ -17,7 +23,7 @@
   text-decoration: none;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 0;
+    padding: 3px 0 0;
   }
 }
 

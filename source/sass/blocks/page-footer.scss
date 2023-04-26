@@ -6,7 +6,11 @@
   background-color: variables.$main-color-3;
 
   @media (min-width: variables.$tablet-width) {
-    padding: 55px 0;
+    padding: 58px 0 55px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    padding: 66px 0;
   }
 }
 
@@ -24,10 +28,11 @@
 }
 
 .page-footer__section {
-  padding-bottom: 16px;
-  margin-bottom: 16px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   width: 100%;
   border-bottom: 1px solid #d9d9d9;
 
@@ -38,6 +43,8 @@
   }
 
   @media (min-width: variables.$tablet-width) {
+    transform: translateX(1px);
+    max-width: 33%;
     margin: 0;
     padding: 0;
     width: fit-content;
@@ -58,6 +65,11 @@
 
 .page-footer__logo {
   color: variables.$text-color-3;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 143px;
+    height: 27px;
+  }
 }
 
 .page-footer__link:hover .page-footer__logo {

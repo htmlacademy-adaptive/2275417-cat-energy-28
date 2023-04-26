@@ -2,7 +2,7 @@
 
 .additional-product {
   margin: 0;
-  padding: 13px 0 19px;
+  padding: 13px 0 18px;
   border-top: 1px solid variables.$extra-color-2;
 
   &:last-of-type {
@@ -10,11 +10,11 @@
   }
 
   @media (min-width: variables.$tablet-width) {
-    padding: 25px 37px 26px;
+    padding: 25px 37px 28px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    row-gap: 22px;
+    row-gap: 25px;
     border: 1px solid variables.$extra-color-2;
     border-bottom: none;
   }
@@ -66,11 +66,13 @@
   margin-bottom: 15px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   @media (min-width: variables.$tablet-width) {
+    transform: translate(-2px, 4px);
     margin: 0;
     justify-content: flex-end;
-    column-gap: 49px;
+    column-gap: 50px;
   }
 
   @media (min-width: variables.$desktop-width) {
