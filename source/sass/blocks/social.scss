@@ -27,6 +27,10 @@
   }
 }
 
+.social__icon {
+  transition: all 0.2s ease;
+}
+
 .social__link:hover .social__icon {
   color: variables.$main-color-2;
 }

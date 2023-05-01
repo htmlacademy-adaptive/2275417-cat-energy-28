@@ -26,6 +26,7 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+  transition: all 0.2s ease;
 
   &::before {
     position: absolute;
@@ -38,6 +39,7 @@
     background-color: variables.$button-icon-color-2;
     border: none;
     border-radius: 2px;
+    transition: all 0.2s ease;
   }
 }
 
@@ -90,4 +92,5 @@
   z-index: 3;
   color: variables.$button-icon-color-2;
   stroke: variables.$button-icon-color-2;
+  transition: all 0.2s ease;
 }

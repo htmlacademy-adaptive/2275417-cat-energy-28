@@ -143,6 +143,7 @@
   align-items: center;
   column-gap: 15px;
   text-decoration: none;
+  transition: all 0.2s ease;
 
   @media (min-width: variables.$tablet-width) {
     transform: translateX(1px);

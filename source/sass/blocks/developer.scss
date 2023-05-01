@@ -13,6 +13,7 @@
   justify-content: space-between;
   align-items: center;
   text-decoration: none;
+  transition: all 0.2s ease;
 
   &:active {
     opacity: 0.3;
@@ -36,6 +37,7 @@
 
 .developer__icon {
   color: variables.$button-icon-color-2;
+  transition: all 0.2s ease;
 }
 
 .developer__link:hover .developer__icon {

@@ -3,13 +3,26 @@
 .page-header {
   position: relative;
   max-height: fit-content;
+  z-index: 3;
   margin: 0;
   padding: 10px 0 0;
   overflow-x: clip;
   overflow-y: visible;
 
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: calc(100% - 1px);
+    background-color: variables.$main-color-1;
+    content: "";
+  }
+
   &::after {
     position: absolute;
+    z-index: 3;
     top: calc(100% - 1px);
     left: -20px;
     width: calc(100vw + 20px);
@@ -27,6 +40,10 @@
   @media (min-width: variables.$tablet-width) {
     padding: 0;
 
+    &::before {
+      display: none;
+    }
+
     &::after {
       display: none;
     }
@@ -35,6 +52,12 @@
   @media (min-width: variables.$desktop-width) {
     padding: 53px 0 0;
   }
+
+  &--nojs {
+    ::before {
+      display: none;
+    }
+  }
 }
 
 .page-header__container {
@@ -42,6 +65,11 @@
     display: flex;
     justify-content: space-between;
   }
+}
+
+.page-header__inner {
+  position: relative;
+  z-index: 3;
 }
 
 .page-header__logo {
