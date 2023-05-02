@@ -6,31 +6,14 @@
   background-color: variables.$living-example-background-color;
 
   @media (min-width: variables.$tablet-width) {
-    transform: translateX(1px);
     position: relative;
     padding: 43px 0 98px;
-    background-color: transparent;
-
-    &::before {
-      position: absolute;
-      transform: translateX(-1px);
-      top: 57%;
-      left: 0;
-      z-index: -1;
-      width: 100%;
-      height: 43%;
-      content: "";
-      background-color: variables.$living-example-background-color;
-    }
+    background-image: linear-gradient(variables.$main-color-1 57%, variables.$living-example-background-color 57%);
   }
 
   @media (min-width: variables.$desktop-width) {
     padding: 0 0 75px;
-
-    &::before {
-      top: 23%;
-      height: 77%;
-    }
+    background-image: linear-gradient(variables.$main-color-1 23%, variables.$living-example-background-color 23%);
   }
 }
 

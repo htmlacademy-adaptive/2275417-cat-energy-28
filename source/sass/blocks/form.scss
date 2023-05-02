@@ -220,6 +220,7 @@
   display: flex;
   align-items: center;
   column-gap: 13px;
+  transition: all 0.2s ease;
 
   @media (min-width: variables.$tablet-width) {
     margin-bottom: 20px;
@@ -266,6 +267,7 @@
   align-items: center;
   column-gap: 15px;
   cursor: pointer;
+  transition: all 0.2s ease;
 
   @media (min-width: variables.$tablet-width) {
     column-gap: 20px;
@@ -280,11 +282,16 @@
   align-items: center;
   border: 1px solid variables.$extra-color-2;
   border-radius: 50%;
+  transition: all 0.2s ease;
 
   @media (min-width: variables.$tablet-width) {
     width: 40px;
     height: 40px;
   }
+}
+
+.form__radio-input {
+  transition: all 0.2s ease;
 }
 
 .form__radio-input:checked + .form__radio-mark::before {
@@ -320,6 +327,7 @@
   align-items: center;
   column-gap: 16px;
   cursor: pointer;
+  transition: all 0.2s ease;
 
   @media (min-width: variables.$tablet-width) {
     column-gap: 20px;
@@ -342,11 +350,16 @@
   width: 30px;
   height: 30px;
   border: 1px solid variables.$extra-color-2;
+  transition: all 0.2s ease;
 
   @media (min-width: variables.$tablet-width) {
     width: 40px;
     height: 40px;
   }
+}
+
+.form__checkbox-input {
+  transition: all 0.2s ease;
 }
 
 .form__checkbox-input:checked + .form__checkbox-mark::before {
@@ -383,6 +396,7 @@
   color: variables.$text-color-1;
   text-transform: uppercase;
   border: 1px solid variables.$extra-color-3;
+  transition: all 0.2s ease;
 
   &::placeholder {
     color: variables.$text-color-1;
@@ -408,6 +422,7 @@
   top: 12px;
   right: 15px;
   color: variables.$text-color-2;
+  transition: all 0.2s ease;
 
   @media (min-width: variables.$tablet-width) {
     top: 16px;
@@ -427,6 +442,7 @@
   border: 1px solid variables.$extra-color-3;
   text-transform: uppercase;
   resize: none;
+  transition: all 0.2s ease;
 
   &:placeholder {
     font-family: variables.$main-font-1;

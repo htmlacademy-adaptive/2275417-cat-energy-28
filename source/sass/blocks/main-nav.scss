@@ -10,6 +10,32 @@
   }
 }
 
+@keyframes slideDown {
+  from {
+    transform: translateY(-200px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-200px);
+  }
+}
+
+.main-nav--opened .main-nav__list {
+  animation-name: slideDown;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+}
+
 .main-nav--nojs .main-nav__toggle {
   display: none;
 }
@@ -56,7 +82,7 @@
 }
 
 .main-nav--nojs .main-nav__list {
-  position: static;
+  z-index: 3;
 }
 
 .main-nav__item {
@@ -86,7 +112,7 @@
     position: absolute;
     top: calc(100% - 1px);
     left: -20px;
-    width: 100vw;
+    width: calc(100vw + 20px);
     height: 1px;
     background-color: variables.$extra-color-1;
     content: "";
@@ -158,6 +184,7 @@
   display: flex;
   justify-content: center;
   text-decoration: none;
+  transition: all 0.2s ease;
 
   @media (min-width: variables.$tablet-width) {
     position: relative;
@@ -225,6 +252,7 @@
   position: absolute;
   top: 13px;
   right: 20px;
+  z-index: 3;
   margin: 0;
   padding: 0;
   width: 32px;
@@ -232,6 +260,12 @@
   background-color: variables.$main-color-1;
   border: none;
   cursor: pointer;
+  transition: all 0.2s ease;
+
+  &::before,
+  ::after {
+    transition: all 0.2s ease;
+  }
 
   @media (min-width: variables.$tablet-width) {
     display: none;
@@ -246,6 +280,7 @@
     left: 8px;
     right: 0;
     bottom: 7px;
+    width: 24px;
     height: 1.5px;
     background-color: variables.$button-icon-color-1;
     box-shadow: 0 8px 0 0 variables.$button-icon-color-1, 0 16px 0 0 variables.$button-icon-color-1;
@@ -294,5 +329,44 @@
   &:active::before,
   &:active::after {
     background-color: rgba(variables.$button-icon-color-1, 30%);
+  }
+}
+
+.main-nav--closing .main-nav__list {
+  animation-name: slideUp;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.main-nav--closing .main-nav__toggle {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 8px;
+    right: 0;
+    bottom: 7px;
+    transform: rotate(0);
+    width: 24px;
+    height: 1.5px;
+    background-color: variables.$button-icon-color-1;
+    box-shadow: 0 8px 0 0 variables.$button-icon-color-1, 0 16px 0 0 variables.$button-icon-color-1;
+  }
+
+  &:hover::before {
+    background-color: rgba(variables.$button-icon-color-1, 60%);
+    box-shadow: 0 8px 0 0 rgba(variables.$button-icon-color-1, 60%),
+      0 16px 0 0 rgba(variables.$button-icon-color-1, 60%);
+  }
+
+  &:active::before {
+    background-color: rgba(variables.$button-icon-color-1, 30%);
+    box-shadow: 0 8px 0 0 rgba(variables.$button-icon-color-1, 30%),
+      0 16px 0 0 rgba(variables.$button-icon-color-1, 30%);
+  }
+
+  &::after {
+    display: none;
   }
 }

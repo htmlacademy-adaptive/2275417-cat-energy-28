@@ -65,6 +65,7 @@
 
 .page-footer__logo {
   color: variables.$text-color-3;
+  transition: all 0.2s ease;
 
   @media (min-width: variables.$tablet-width) {
     width: 143px;
