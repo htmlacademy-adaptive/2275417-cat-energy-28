@@ -9,6 +9,9 @@
   <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="stylesheet" href="css/style.min.css">
+  <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" crossorigin="anonymous">
   <title>HTML Academy: Кэт энерджи</title>
 </head>
 
@@ -69,7 +72,7 @@
                   <source media="(min-width: 768px)" srcset="img/catalog/product-1-tablet-1x.png 1x,
                   img/catalog/product-1-tablet-2x.png 2x">
                   <img class="product-card__image" src="img/catalog/product-1-mobile-1x.png" srcset="img/catalog/product-1-mobile-2x.png 2x"
-                  width="140" height="112" alt="Cat Energy PRO 500 г.">
+                  loading="lazy" width="140" height="112" alt="Cat Energy PRO 500 г.">
                 </picture>
               </a>
               <a class="product-card__link" href="#">
@@ -106,7 +109,7 @@
                   <source media="(min-width: 768px)" srcset="img/catalog/product-2-tablet-1x.png 1x,
                   img/catalog/product-2-tablet-2x.png 2x">
                   <img class="product-card__image" src="img/catalog/product-2-mobile-1x.png" srcset="img/catalog/product-2-mobile-2x.png 2x"
-                  width="140" height="112" alt="Cat Energy PRO 1000 г.">
+                  loading="lazy" width="140" height="112" alt="Cat Energy PRO 1000 г.">
                 </picture>
               </a>
               <a class="product-card__link" href="#">
@@ -142,7 +145,7 @@
                 <source media="(min-width: 768px)" srcset="img/catalog/product-3-tablet-1x.png 1x,
                 img/catalog/product-3-tablet-2x.png 2x">
                 <img class="product-card__image" src="img/catalog/product-3-mobile-1x.png" srcset="img/catalog/product-3-mobile-2x.png 2x"
-                width="140" height="112" alt="Cat Energy PRO 500 г.">
+                loading="lazy" width="140" height="112" alt="Cat Energy PRO 500 г.">
               </picture>
               </a>
               <a class="product-card__link" href="#">
@@ -179,7 +182,7 @@
                   <source media="(min-width: 768px)" srcset="img/catalog/product-4-tablet-1x.png 1x,
                   img/catalog/product-4-tablet-2x.png 2x">
                   <img class="product-card__image" src="img/catalog/product-4-mobile-1x.png" srcset="img/catalog/product-4-mobile-2x.png 2x"
-                  width="140" height="112" alt="Cat Energy PRO 1000 г.">
+                  loading="lazy" width="140" height="112" alt="Cat Energy PRO 1000 г.">
                 </picture>
               </a>
               <a class="product-card__link" href="#">
@@ -211,13 +214,13 @@
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/product-5-tablet-1x.webp 1x,
                   img/catalog/product-5-tablet-2x.webp 2x">
                   <source type="image/webp" srcset="img/catalog/product-5-mobile-1x.webp 1x, img/catalog/product-5-mobile-2x.webp 2x">
-                <source media="(min-width: 1440px)" srcset="img/catalog/product-5-desktop-1x.png 1x,
-                img/catalog/product-5-desktop-2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/catalog/product-5-tablet-1x.png 1x,
-                img/catalog/product-5-tablet-2x.png 2x">
-                <img class="product-card__image" src="img/catalog/product-5-mobile-1x.png" srcset="img/catalog/product-5-mobile-2x.png 2x"
-                width="140" height="112" alt="Cat Energy slim 500 г.">
-              </picture>
+                  <source media="(min-width: 1440px)" srcset="img/catalog/product-5-desktop-1x.png 1x,
+                  img/catalog/product-5-desktop-2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/product-5-tablet-1x.png 1x,
+                  img/catalog/product-5-tablet-2x.png 2x">
+                  <img class="product-card__image" src="img/catalog/product-5-mobile-1x.png" srcset="img/catalog/product-5-mobile-2x.png 2x"
+                  loading="lazy" width="140" height="112" alt="Cat Energy slim 500 г.">
+                </picture>
               </a>
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">Cat Energy slim 500 г</h3>
@@ -248,13 +251,13 @@
                   <source type="image/webp" media="(min-width: 768px)" srcset="img/catalog/product-6-tablet-1x.webp 1x,
                   img/catalog/product-6-tablet-2x.webp 2x">
                   <source type="image/webp" srcset="img/catalog/product-6-mobile-1x.webp 1x, img/catalog/product-6-mobile-2x.webp 2x">
-                <source media="(min-width: 1440px)" srcset="img/catalog/product-6-desktop-1x.png 1x,
-                img/catalog/product-6-desktop-2x.png 2x">
-                <source media="(min-width: 768px)" srcset="img/catalog/product-6-tablet-1x.png 1x,
-                img/catalog/product-6-tablet-2x.png 2x">
-                <img class="product-card__image" src="img/catalog/product-6-mobile-1x.png" srcset="img/catalog/product-6-mobile-2x.png 2x"
-                width="140" height="112" alt="Cat Energy slim 1000 г.">
-              </picture>
+                  <source media="(min-width: 1440px)" srcset="img/catalog/product-6-desktop-1x.png 1x,
+                  img/catalog/product-6-desktop-2x.png 2x">
+                  <source media="(min-width: 768px)" srcset="img/catalog/product-6-tablet-1x.png 1x,
+                  img/catalog/product-6-tablet-2x.png 2x">
+                  <img class="product-card__image" src="img/catalog/product-6-mobile-1x.png" srcset="img/catalog/product-6-mobile-2x.png 2x"
+                  loading="lazy" width="140" height="112" alt="Cat Energy slim 1000 г.">
+                </picture>
               </a>
               <a class="product-card__link" href="#">
                 <h3 class="product-card__title">Cat Energy slim 1000 г</h3>
@@ -290,7 +293,7 @@
                   <source media="(min-width: 768px)" srcset="img/catalog/product-7-tablet-1x.png 1x,
                   img/catalog/product-7-tablet-2x.png 2x">
                   <img class="product-card__image" src="img/catalog/product-7-mobile-1x.png" srcset="img/catalog/product-7-mobile-2x.png 2x"
-                  width="140" height="112" alt="Cat Energy slim 500 г.">
+                  loading="lazy" width="140" height="112" alt="Cat Energy slim 500 г.">
                 </picture>
               </a>
               <a class="product-card__link" href="#">
