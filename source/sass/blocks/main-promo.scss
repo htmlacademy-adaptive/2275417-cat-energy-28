@@ -6,6 +6,7 @@
   margin: 0;
   padding: 27px 0 0;
   display: flex;
+  overflow-x: clip;
 
   &::before {
     content: "";
