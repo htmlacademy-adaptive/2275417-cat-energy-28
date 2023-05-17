@@ -11,13 +11,13 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    padding: 74px 0 75px;
+    padding: 72px 0 75px;
   }
 }
 
 .products-catalog__title {
   @include page-heading-style;
-  margin: 0 0 41px;
+  margin: 0 0 40px;
   padding: 0;
   color: variables.$text-color-2;
 
@@ -40,13 +40,13 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 60px;
-    row-gap: 140px;
+    row-gap: 141px;
   }
 
   @media (min-width: variables.$desktop-width) {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 80px;
-    row-gap: 144px;
+    row-gap: 143px;
   }
 }
 

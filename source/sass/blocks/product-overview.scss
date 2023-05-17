@@ -127,25 +127,25 @@
     column-gap: 0;
     row-gap: 29px;
 
-    &:nth-child(1) {
+    &:nth-child(4n-3) {
       background-image: url("../../img/main/one.svg");
       background-position: 126px 40px;
       background-repeat: no-repeat;
     }
 
-    &:nth-child(2) {
+    &:nth-child(4n-2) {
       background-image: url("../../img/main/two.svg");
       background-position: 122px 38px;
       background-repeat: no-repeat;
     }
 
-    &:nth-child(3) {
+    &:nth-child(4n-1) {
       background-image: url("../../img/main/three.svg");
       background-position: 124px 38px;
       background-repeat: no-repeat;
     }
 
-    &:nth-child(4) {
+    &:nth-child(4n) {
       background-image: url("../../img/main/four.svg");
       background-position: 124px 40px;
       background-repeat: no-repeat;

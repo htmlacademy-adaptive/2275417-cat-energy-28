@@ -7,10 +7,13 @@
 }
 
 .developer__link {
-  padding: 4px 0 0;
+  padding: 5px 0 0;
   width: 100%;
+  max-width: 280px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+  column-gap: 10px;
   align-items: center;
   text-decoration: none;
   transition: all 0.2s ease;
@@ -25,6 +28,7 @@
 }
 
 .developer__text {
+  max-width: 140px;
   font-family: variables.$main-font-2;
   font-size: 16px;
   line-height: 19px;
@@ -36,11 +40,16 @@
 }
 
 .developer__icon {
+  flex-shrink: 0;
   color: variables.$button-icon-color-2;
   transition: all 0.2s ease;
 }
 
 .developer__link:hover .developer__icon {
+  color: variables.$main-color-2;
+}
+
+.developer__link:focus-visible .developer__icon {
   color: variables.$main-color-2;
 }
 

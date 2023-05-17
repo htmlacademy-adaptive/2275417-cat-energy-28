@@ -1,9 +1,9 @@
 
 <svg xmlns="http://www.w3.org/2000/svg">
   <symbol viewBox="0 0 40 40" id="icon-thumb">
-  <rect width="38" height="38" x="1" y="1" fill="#fff" rx="19" />
-  <path fill="currentColor" d="m16 11-8 9 8 9V11ZM32 20l-8-9v18l8-9Z" />
-  <rect width="38" height="38" x="1" y="1" stroke="" stroke-width="2" rx="19" />
+  <rect width="38" height="38" x="1" y="1" fill="#fff" rx="19"/>
+  <path fill="CurrentColor" d="m16 11-8 9 8 9V11ZM32 20l-8-9v18l8-9Z"/>
+  <rect width="38" height="38" x="1" y="1" stroke="" stroke-width="2" rx="19"/>
   </symbol>
   <symbol viewBox="0 0 129 24" id="footer-logo">
     <g fill="currentColor" clip-path="url(#c)">

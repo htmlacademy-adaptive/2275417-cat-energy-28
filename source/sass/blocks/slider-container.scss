@@ -6,7 +6,12 @@
   display: flex;
   width: fit-content;
   height: fit-content;
+  max-height: 256px;
   justify-content: center;
+
+  @media (min-width: variables.$tablet-width) {
+    max-height: none;
+  }
 
   @media (min-width: variables.$desktop-width) {
     margin: 0 0 0 auto;
@@ -47,11 +52,20 @@
   background-color: variables.$main-color-2;
 }
 
+.slider-container__button:focus::before {
+  background-color: variables.$main-color-2;
+}
+
 .slider-container__button:active::before {
   background-color: rgba(variables.$button-active-color-1, 0.6);
 }
 
 .slider-container__button:hover .slider-container__thumb {
+  color: variables.$main-color-2;
+  stroke: variables.$main-color-2;
+}
+
+.slider-container__button:focus .slider-container__thumb {
   color: variables.$main-color-2;
   stroke: variables.$main-color-2;
 }
