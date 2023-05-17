@@ -16,7 +16,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header">
+  <header class="page-header page-header--nojs">
     <div class="page-header__container container">
       <div class="page-header__inner">
         <a class="page-header__logo company-logo" href="index.html">
@@ -30,8 +30,8 @@
       <!--to show toggle button, first remove "main-nav--nojs",
               then add "main-nav--closed" to show toggle button or "main-nav--opened" to show opened menu-->
       <nav class="main-nav main-nav--nojs">
-        <ul class="main-nav__list">
-          <li class="main-nav__item">
+        <ul class="main-nav__list main-nav__list--form">
+          <li class="main-nav__item main-nav__item--index">
             <a class="main-nav__link" href="index.html">
               <span class="main-nav__text">главная</span>
             </a>
@@ -80,6 +80,8 @@
               <span class="visually-hidden">Тип программы</span>
               <ul class="form__list">
                 <li class="form__item">
+                  <!--to disable radio elements add "form__radio-label--disabled"
+                    to form__radio-label"-->
                   <label class="form__radio-label">
                     <input class="form__radio-input visually-hidden" type="radio" name="course-type" value="похудение" checked>
                     <span class="form__radio-mark"></span>
@@ -115,7 +117,7 @@
               </label>
               <label class="form__label form__label--contacts">
                 <span class="form__text">Телефон:*</span>
-                <input class="form__input form__input--with-icon" type="tel" name="phone number" required placeholder="8 (960) 900-60-90">
+                <input class="form__input form__input--with-icon form__input--tel" type="tel" name="phone number" required placeholder="8 (960) 900-60-90">
                 <svg class="form__input-icon" aria-hidden="true" focusable="false" width="20" height="20" fill="none">
                   <use href="img/sprite.svg#phone-icon"></use>
                 </svg>
@@ -124,7 +126,7 @@
           </fieldset>
           <fieldset class="form__group form__group--comment form__group--with-lines">
             <h2 class="form__title form__title--comment">Комментарий</h2>
-            <label class="form__label" for="textarea">
+            <label class="form__label form__label--comment" for="textarea">
               <span class="visually-hidden">Поле для комментария</span>
             </label>
             <textarea class="form__textarea" id="textarea" name="comment" placeholder="Расскажите обо всех повадках кота"></textarea>
@@ -132,6 +134,8 @@
           <fieldset class="form__group form__group--extra form__group--with-lines">
             <h2 class="form__title form__title--extra">Дополнительно</h2>
             <ul class="form__extra-list">
+            <!--to disable checkbox elements add "form__checkbox-label--disabled"
+              to form__checkbox-label"-->
               <li class="form__extra-item">
                 <label class="form__checkbox-label">
                   <input class="form__checkbox-input visually-hidden" type="checkbox" name="sugar substitute" value="сахарозаменитель" checked>
@@ -173,8 +177,21 @@
       <div class="contacts__container container">
         <div class="contacts__wrapper">
           <h2 class="contacts__title">приглашаем<br> к сотрудничеству дилеров!</h2>
-          <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+          <p class="contacts__text">
+            <span class="contacts__adress-text">ул. Большая Конюшенная, д. 19/8</span>
+            <span class="contacts__city-text">Санкт-Петербург</span>
+          </p>
         </div>
+        <noscript>
+          <picture>
+            <source type="image/webp" media="(min-width: 1440px)" srcset="img/map-desktop.webp">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/map-tablet.webp">
+            <source type="image/webp" srcset="img/map-mobile.webp">
+            <source media="(min-width: 1440px)" srcset="img/map-desktop.jpg">
+            <source media="(min-width: 768px)" srcset="img/map-tablet.jpg">
+            <img class="contacts__image" src="img/map-mobile.jpg" width="280" height="362" alt="Наше местоположение.">
+          </picture>
+        </noscript>
         <iframe class="contacts__map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.603787253322!2d30.32085871595826!3d59.938716481876234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2sBolshaya%20Konyushennaya%20St%2C%2019%2F8%2C%20Sankt-Peterburg%2C%20191186!5e0!3m2!1sen!2sru!4v1680280165520!5m2!1sen!2sru"
           style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">

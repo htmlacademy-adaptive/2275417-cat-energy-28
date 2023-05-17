@@ -8,33 +8,31 @@
   &--alter-background {
     background-color: variables.$main-color-3;
   }
-
-  @media (min-width: variables.$desktop-width) {
-    padding: 0;
-  }
 }
 
 .contacts__container {
-  position: relative;
   overflow: visible;
 }
 
 .contacts__wrapper {
+  max-width: 400px;
+  margin: 0 auto;
   padding: 26px 0 26px;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   @media (min-width: variables.$tablet-width) {
+    max-width: 920px;
     padding: 56px 40px 60px;
   }
 
   @media (min-width: variables.$desktop-width) {
-    position: absolute;
-    top: 95px;
-    left: 110px;
+    position: relative;
     width: 565px;
-    height: 198px;
-    margin: 0;
+    max-width: none;
+    min-height: 198px;
+    margin: 95px 0 107px;
     padding: 56px 75px 56px 80px;
     background-color: variables.$main-color-1;
     z-index: 1;
@@ -44,7 +42,7 @@
 .contacts__title {
   margin: 0;
   min-width: 139px;
-  max-width: 164px;
+  max-width: 140px;
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
@@ -53,6 +51,7 @@
 
   @media (min-width: variables.$tablet-width) {
     transform: translateY(3px);
+    max-width: 164px;
     font-size: 20px;
     line-height: 26px;
   }
@@ -62,7 +61,7 @@
   transform: translateX(2px);
   margin: 0;
   width: fit-content;
-  max-width: 160px;
+  max-width: 140px;
   font-family: variables.$main-font-2;
   font-size: 14px;
   line-height: 20px;
@@ -70,6 +69,7 @@
 
   @media (min-width: variables.$tablet-width) {
     transform: translateX(1px);
+    max-width: 164px;
     display: flex;
     flex-direction: column;
     row-gap: 20px;
@@ -79,7 +79,7 @@
   }
 
   @media (min-width: variables.$desktop-width) {
-    transform: translate(0);
+    transform: translateX(3px);
     text-align: start;
   }
 }
@@ -97,7 +97,26 @@
   }
 
   @media (min-width: variables.$desktop-width) {
+    position: absolute;
+    top: 0;
+    left: 0;
     margin-left: calc(-50vw + 50%);
     width: calc(100vw);
+    min-height: 400px;
+    height: 100%;
+  }
+}
+
+.contacts__image {
+  margin: 0 auto;
+  object-fit: contain;
+
+  @media (min-width: variables.$tablet-width) {
+    width: 708px;
+    height: 400px;
+  }
+
+  @media (min-width: variables.$desktop-width) {
+    width: 1220px;
   }
 }

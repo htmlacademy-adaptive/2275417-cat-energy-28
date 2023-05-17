@@ -3,6 +3,7 @@
 .social__list {
   margin: 0;
   padding: 0;
+  max-width: 200px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -17,8 +18,9 @@
 }
 
 .social__link {
-  padding: 4px 0;
+  padding: 5px 0 4px;
   display: flex;
+  flex-wrap: wrap;
   color: variables.$button-icon-color-2;
   text-decoration: none;
 
@@ -32,6 +34,10 @@
 }
 
 .social__link:hover .social__icon {
+  color: variables.$main-color-2;
+}
+
+.social__link:focus-visible .social__icon {
   color: variables.$main-color-2;
 }
 

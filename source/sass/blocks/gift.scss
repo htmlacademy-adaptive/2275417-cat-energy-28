@@ -2,7 +2,7 @@
 
 .gift {
   width: 100%;
-  height: 290px;
+  min-height: 290px;
   margin: 0 auto;
   padding: 59px 0 43px 0;
   display: flex;
@@ -12,6 +12,7 @@
   background-color: variables.$main-color-2;
   background-image: url("../../img/catalog/gift-background-1x.webp");
   background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 
   @media (min-resolution: 2dppx) {
@@ -34,6 +35,9 @@
   }
 
   @media (min-width: variables.$tablet-width) {
+    margin: 0 0 0 1px;
+    min-height: 100px;
+    height: 100%;
     max-height: 100%;
     padding: 57px 124px 61px 77px;
     flex-direction: row;
@@ -46,6 +50,7 @@
 
   @media (min-width: variables.$desktop-width) {
     width: 245px;
+    min-height: 289px;
     padding: 56px 0 42px;
     margin: 0;
     flex-direction: column;
@@ -68,10 +73,12 @@
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
+    transform: translate(0, 3px);
     text-align: start;
   }
 
   @media (min-width: variables.$desktop-width) {
+    transform: translate(0, 0);
     text-align: center;
   }
 }

@@ -3,6 +3,7 @@
 
 .product-overview {
   padding: 0 0 49px;
+  overflow-x: clip;
 
   @media (min-width: variables.$tablet-width) {
     padding: 0 0 46px;
@@ -36,13 +37,17 @@
 
   @media (min-width: variables.$tablet-width) {
     transform: translateX(1px);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    padding-right: 75px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     column-gap: 60px;
     row-gap: 37px;
   }
 
   @media (min-width: variables.$desktop-width) {
+    padding: 0;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     column-gap: 78px;
   }
@@ -122,25 +127,25 @@
     column-gap: 0;
     row-gap: 29px;
 
-    &:nth-child(1) {
+    &:nth-child(4n-3) {
       background-image: url("../../img/main/one.svg");
       background-position: 126px 40px;
       background-repeat: no-repeat;
     }
 
-    &:nth-child(2) {
+    &:nth-child(4n-2) {
       background-image: url("../../img/main/two.svg");
       background-position: 122px 38px;
       background-repeat: no-repeat;
     }
 
-    &:nth-child(3) {
+    &:nth-child(4n-1) {
       background-image: url("../../img/main/three.svg");
       background-position: 124px 38px;
       background-repeat: no-repeat;
     }
 
-    &:nth-child(4) {
+    &:nth-child(4n) {
       background-image: url("../../img/main/four.svg");
       background-position: 124px 40px;
       background-repeat: no-repeat;

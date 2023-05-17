@@ -5,6 +5,7 @@
   position: relative;
   padding: 30px 20px 18px;
   background-color: variables.$main-color-3;
+  overflow-x: clip;
 
   &--weight-loss::before {
     position: absolute;
@@ -19,7 +20,7 @@
 
     @media (min-width: variables.$tablet-width) {
       top: 81px;
-      left: 446px;
+      left: auto;
       right: 62px;
       width: 200px;
       height: 211px;
@@ -50,7 +51,7 @@
     @media (min-width: variables.$tablet-width) {
       top: 91px;
       right: 28px;
-      left: 412px;
+      left: auto;
       width: 268px;
       height: 200px;
       background-image: url("../../img/main/cat-back-tablet-2.svg");
@@ -78,7 +79,6 @@
 
 .series-overview__title {
   width: fit-content;
-  max-width: 150px;
   margin: 0 auto 29px 71px;
   padding: 0;
   font-weight: 400;
@@ -89,8 +89,7 @@
   text-align: center;
 
   @media (min-width: variables.$tablet-width) {
-    margin: 0 auto 24px 0;
-    max-width: 250px;
+    margin: 0 316px 24px 0;
     font-size: 36px;
     line-height: 36px;
   }
@@ -107,12 +106,12 @@
 
 
   &:last-of-type {
-    margin: 0 0 15px 0;
+    margin-bottom: 15px;
     padding-bottom: 22px;
     border-bottom: 1px solid #d9d9d9;
 
     @media (min-width: variables.$tablet-width) {
-      margin: 0 auto 48px 0;
+      margin-bottom: 48px;
       padding: 0;
       border: none;
     }
@@ -124,8 +123,7 @@
 
   @media (min-width: variables.$tablet-width) {
     @include text-tablet;
-    margin: 0 auto 15px 0;
-    max-width: 340px;
+    margin: 0 316px 15px 0;
   }
 
   @media (min-width: variables.$desktop-width) {
@@ -140,6 +138,7 @@
   padding: 4px 0;
   display: flex;
   justify-content: flex-start;
+  flex-wrap: wrap;
   align-items: center;
   column-gap: 15px;
   text-decoration: none;
@@ -165,7 +164,7 @@
 }
 
 .series-overview__link-text {
-  max-width: 80%;
+  max-width: 60%;
   font-size: 16px;
   line-height: 16px;
   color: variables.$text-color-2;
